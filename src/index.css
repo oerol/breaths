@@ -1,0 +1,28 @@
+:root {
+  /* https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41 */
+  --color-dust-grey: #dad7cdff;
+  --color-dry-sage: #a3b18aff;
+  --color-fern: #588157ff;
+  --color-hunter-green: #3a5a40ff;
+  --color-pine-teal: #344e41ff;
+
+  --background-color: var(--color-dust-grey);
+}
+
+/* Resets */
+body {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: var(--background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+root {
+  height: 100%;
+}
