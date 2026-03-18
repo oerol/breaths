@@ -8,7 +8,6 @@
 #breathing-box {
   --minimum-size: 50px;
   --maximum-size: 150px;
-
   --color-minimum-breath: var(--color-dry-sage);
   --color-maximum-breath: var(--color-fern);
 
@@ -20,7 +19,6 @@
   animation-direction: normal;
   animation-iteration-count: infinite;
   animation-fill-mode: none;
-  animation-play-state: running;
   animation-composition: add;
 }
 
