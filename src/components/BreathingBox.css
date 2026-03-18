@@ -1,0 +1,58 @@
+#breathing-box__wrapper {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#breathing-box {
+  --minimum-size: 50px;
+  --maximum-size: 150px;
+
+  --color-minimum-breath: var(--color-dry-sage);
+  --color-maximum-breath: var(--color-fern);
+
+  border-radius: 50%;
+
+  animation-name: breathing;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-composition: add;
+}
+
+@keyframes breathing {
+  0% {
+    height: var(--minimum-size);
+    width: var(--minimum-size);
+    background: var(--color-minimum-breath);
+    transform: rotate(0deg);
+  }
+  25% {
+    height: var(--maximum-size);
+    width: var(--maximum-size);
+    background: var(--color-maximum-breath);
+    transform: rotate(90deg);
+  }
+  50% {
+    height: var(--maximum-size);
+    width: var(--maximum-size);
+    background: var(--color-maximum-breath);
+    transform: rotate(90deg);
+  }
+  75% {
+    height: var(--minimum-size);
+    width: var(--minimum-size);
+    background: var(--color-minimum-breath);
+    transform: rotate(180deg);
+  }
+  100% {
+    height: var(--minimum-size);
+    width: var(--minimum-size);
+    background: var(--color-minimum-breath);
+    transform: rotate(180deg);
+  }
+}
