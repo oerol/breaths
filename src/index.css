@@ -16,11 +16,15 @@ body {
 
 body {
   height: 100vh;
-  background: var(--background-color);
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: radial-gradient(
+    circle,
+    var(--color-dust-grey),
+    var(--color-dry-sage)
+  );
 }
 
 #root {
