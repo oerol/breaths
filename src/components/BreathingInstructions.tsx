@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./BreathingInstructions.css";
+import BreathHoldAnimation from "./BreathHoldAnimation";
 import type { Seconds } from "../types/time-units";
 
 const BREATHING_STATE = {
@@ -41,6 +42,9 @@ export default function BreathingInstructions({
   return (
     <div id="breathing-instructions">
       {BREATHING_STATE_LABELS[BREATHING_STATES[breathingState]]}
+      {BREATHING_STATES[breathingState] === BREATHING_STATE.BREATH_HOLD && (
+        <BreathHoldAnimation breathingInterval={breathingInterval} />
+      )}
     </div>
   );
 }
