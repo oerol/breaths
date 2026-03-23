@@ -1,7 +1,10 @@
-#start-breathing-button {
+.button {
   background: var(--color-hunter-green);
   color: white;
+  padding: 0.125rem 1rem;
+
   border: none;
   border-radius: 3px;
-  padding: 0.125rem 1rem;
+
+  cursor: pointer;
 }
