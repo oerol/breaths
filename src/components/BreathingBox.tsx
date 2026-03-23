@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Seconds } from "../types/time-units";
 import "./BreathingBox.css";
 

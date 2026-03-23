@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./BreathingInstructions.css";
-import BreathHoldAnimation from "./BreathHoldAnimation";
 import type { Seconds } from "../types/time-units";
 import BreathingInstructionsFinished from "./BreathingInstructionsFinished";
 import BreathingInstructionsActive from "./BreathingInstructionsActive";
