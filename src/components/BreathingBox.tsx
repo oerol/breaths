@@ -5,10 +5,12 @@ export default function BreathingBox({
   breathingInterval,
   breathingCycles,
   isBreathing,
+  setIsFinished,
 }: {
   breathingInterval: Seconds;
   breathingCycles: number;
   isBreathing: boolean;
+  setIsFinished: (value: boolean) => void;
 }) {
   return (
     <div id="breathing-box__wrapper">
@@ -19,6 +21,7 @@ export default function BreathingBox({
           animationIterationCount: String(breathingCycles),
           animationPlayState: isBreathing ? "running" : "paused",
         }}
+        onAnimationEnd={() => setIsFinished(true)}
       ></div>
     </div>
   );
