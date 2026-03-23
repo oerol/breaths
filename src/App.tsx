@@ -7,11 +7,24 @@ import StartBreathingButton from "./components/StartBreathingButton";
 import BreathingDurationSelector from "./components/BreathingDurationSelector";
 
 function App() {
-  const BREATHING_INTERVAL: Seconds = 1.5;
+  const BREATHING_INTERVAL: Seconds = 0.5;
   const [isBreathing, setIsBreathing] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
   const [breathingCycles, setBreathingCycles] = useState<number>(3);
+
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const replayAnimation = () => {
+    setAnimationKey((prev) => prev + 1);
+  };
+
+  // TODO: Decide for "repeat" or "replay" or "reload".
+  const repeat = () => {
+    setIsBreathing(false);
+    setIsFinished(false);
+    replayAnimation();
+  };
 
   return (
     <>
@@ -20,11 +33,13 @@ function App() {
         breathingCycles={breathingCycles}
         isBreathing={isBreathing}
         setIsFinished={setIsFinished}
+        animationKey={animationKey}
       />
       {isBreathing && (
         <BreathingInstructions
           breathingInterval={BREATHING_INTERVAL}
           isFinished={isFinished}
+          onRepeat={repeat}
         />
       )}
       {!isBreathing && <StartBreathingButton setIsBreathing={setIsBreathing} />}

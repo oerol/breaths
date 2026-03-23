@@ -1,0 +1,10 @@
+.repeat-button__wrapper {
+  margin-top: 1rem;
+}
+
+/* TODO: Export this to an IconButton component. */
+.repeat-button__wrapper button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

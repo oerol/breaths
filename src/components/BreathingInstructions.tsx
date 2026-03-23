@@ -31,9 +31,11 @@ const FINISHED_TEXT = "All done! Slowly get back to regular breathing.";
 export default function BreathingInstructions({
   breathingInterval,
   isFinished,
+  onRepeat,
 }: {
   breathingInterval: Seconds;
   isFinished: boolean;
+  onRepeat: () => void;
 }) {
   const [breathingState, setBreathingState] = useState(0);
   const [showIsFinished, setShowIsFinished] = useState(false);
@@ -60,6 +62,7 @@ export default function BreathingInstructions({
     <div id="breathing-instructions">
       <BreathingInstructionsFinished
         className={showIsFinished ? "fade-in" : "display-none"}
+        onRepeat={onRepeat}
         text={FINISHED_TEXT}
       />
       {!showIsFinished && (
