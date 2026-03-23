@@ -1,0 +1,12 @@
+#breathing-duration-selector__wrapper input {
+  display: none;
+}
+
+#breathing-duration-selector__wrapper label {
+  padding: 0.125rem 1rem;
+  cursor: pointer;
+}
+
+#breathing-duration-selector__wrapper label.checked {
+  text-decoration: underline;
+}

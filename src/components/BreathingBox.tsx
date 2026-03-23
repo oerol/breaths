@@ -3,9 +3,11 @@ import "./BreathingBox.css";
 
 export default function BreathingBox({
   breathingInterval,
+  breathingCycles,
   isBreathing,
 }: {
   breathingInterval: Seconds;
+  breathingCycles: number;
   isBreathing: boolean;
 }) {
   return (
@@ -14,6 +16,7 @@ export default function BreathingBox({
         id="breathing-box"
         style={{
           animationDuration: `${breathingInterval * 4}s`,
+          animationIterationCount: String(breathingCycles),
           animationPlayState: isBreathing ? "running" : "paused",
         }}
       ></div>
