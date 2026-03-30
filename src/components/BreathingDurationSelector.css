@@ -1,5 +1,14 @@
 #breathing-duration-selector__wrapper input {
-  display: none;
+  width: 0;
+  position: absolute;
+}
+
+#breathing-duration-selector__wrapper input:focus {
+  outline: none;
+}
+
+#breathing-duration-selector__wrapper:has(input:focus-visible) {
+  outline: 2px solid Highlight;
 }
 
 #breathing-duration-selector__wrapper label {
