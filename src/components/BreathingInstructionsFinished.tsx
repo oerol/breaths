@@ -1,23 +1,20 @@
-import { ReloadIcon } from "../assets/icons/Reload";
 import "./BreathingInstructionsFinished.css";
+import ReloadButton from "./ReloadButton";
 
 export default function BreathingInstructionsFinished({
-  text,
   className,
   onRepeat,
 }: {
-  text: string;
   className: string;
   onRepeat: () => void;
 }) {
   return (
     <div>
-      <span className={className}> {text} </span>
-      {/* TODO: Export to a seperate component. */}
+      <span className={className}>
+        All done! Slowly get back to regular breathing.
+      </span>
       <div className="repeat-button__wrapper">
-        <button onClick={onRepeat}>
-          <ReloadIcon className={className} />
-        </button>
+        <ReloadButton onClick={onRepeat} className={className} />
       </div>
     </div>
   );

@@ -25,8 +25,6 @@ const BREATHING_STATES = [
   BREATHING_STATE.BREATH_HOLD,
 ] as const;
 
-const FINISHED_TEXT = "All done! Slowly get back to regular breathing.";
-
 export default function BreathingInstructions({
   breathingInterval,
   isFinished,
@@ -40,12 +38,11 @@ export default function BreathingInstructions({
   const [showIsFinished, setShowIsFinished] = useState(false);
 
   useEffect(() => {
+    if (isFinished) {
+      return;
+    }
+
     const interval = setInterval(() => {
-      if (isFinished) {
-        clearInterval(interval);
-        console.log(isFinished);
-        return;
-      }
       setBreathingState((prev) => (prev + 1) % BREATHING_STATES.length);
     }, breathingInterval * 1000);
 
@@ -56,30 +53,26 @@ export default function BreathingInstructions({
     setShowIsFinished(true);
   };
 
-  // TODO: This looks ugly, refactor.
+  const currentState = BREATHING_STATES[breathingState];
+  const currentLabel = BREATHING_STATE_LABELS[currentState];
+  const isBreathHold = currentState === BREATHING_STATE.BREATH_HOLD;
+
   return (
     <div id="breathing-instructions">
-      <BreathingInstructionsFinished
-        className={showIsFinished ? "fade-in" : "display-none"}
-        onRepeat={onRepeat}
-        text={FINISHED_TEXT}
-      />
-      {!showIsFinished && (
+      {showIsFinished ? (
+        <BreathingInstructionsFinished
+          className="fade-in"
+          onRepeat={onRepeat}
+        />
+      ) : (
         <BreathingInstructionsActive
-          text={BREATHING_STATE_LABELS[BREATHING_STATES[breathingState]]}
-          isBreathHold={
-            BREATHING_STATES[breathingState] === BREATHING_STATE.BREATH_HOLD
-          }
+          text={currentLabel}
+          isBreathHold={isBreathHold}
           isFinished={isFinished}
           breathingInterval={breathingInterval}
           onFadeOutAnimation={onFadeOutAnimation}
         />
       )}
-      {/* {isFinished && FINISHED_TEXT} */}
-      {/* {BREATHING_STATE_LABELS[BREATHING_STATES[breathingState]]} */}
-      {/* {BREATHING_STATES[breathingState] === BREATHING_STATE.BREATH_HOLD && ( */}
-      {/*   <BreathHoldAnimation breathingInterval={breathingInterval} /> */}
-      {/* )} */}
     </div>
   );
 }
