@@ -9,11 +9,11 @@ import { LocalStorageStreakCounter } from "./services/streak-counter/local-stora
 import StreakCounter from "./components/StreakCounter";
 
 function App() {
-  const BREATHING_INTERVAL: Seconds = 0.5;
+  const BREATHING_INTERVAL: Seconds = 4;
+  const [breathingCycles, setBreathingCycles] = useState<number>(3);
+
   const [isBreathing, setIsBreathing] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-
-  const [breathingCycles, setBreathingCycles] = useState<number>(3);
 
   const [animationKey, setAnimationKey] = useState(0);
 
