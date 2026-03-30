@@ -5,6 +5,8 @@ import BreathingInstructions from "./components/BreathingInstructions";
 import type { Seconds } from "./types/time-units";
 import StartBreathingButton from "./components/StartBreathingButton";
 import BreathingDurationSelector from "./components/BreathingDurationSelector";
+import { LocalStorageStreakCounter } from "./services/streak-counter/local-storage-streak-counter";
+import StreakCounter from "./components/StreakCounter";
 
 function App() {
   const BREATHING_INTERVAL: Seconds = 0.5;
@@ -24,6 +26,8 @@ function App() {
     setIsFinished(false);
     repeatAnimation();
   };
+
+  const streakCounter = new LocalStorageStreakCounter();
 
   return (
     <>
@@ -49,6 +53,7 @@ function App() {
           setBreathingCycles={setBreathingCycles}
         />
       }
+      <StreakCounter isFinished={isFinished} streakCounter={streakCounter} />
     </>
   );
 }
