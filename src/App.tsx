@@ -32,6 +32,7 @@ function App() {
         breathingInterval={BREATHING_INTERVAL}
         breathingCycles={breathingCycles}
         isBreathing={isBreathing}
+        isFinished={isFinished}
         setIsFinished={setIsFinished}
         animationKey={animationKey}
       />

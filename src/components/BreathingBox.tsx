@@ -5,17 +5,22 @@ export default function BreathingBox({
   breathingInterval,
   breathingCycles,
   isBreathing,
+  isFinished,
   setIsFinished,
   animationKey,
 }: {
   breathingInterval: Seconds;
   breathingCycles: number;
   isBreathing: boolean;
+  isFinished: boolean;
   setIsFinished: (value: boolean) => void;
   animationKey: number;
 }) {
   return (
-    <div id="breathing-box__wrapper">
+    <div
+      id="breathing-box__wrapper"
+      className={isFinished ? "fade-out" : undefined}
+    >
       <div
         id="breathing-box"
         key={animationKey}
