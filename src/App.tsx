@@ -15,15 +15,14 @@ function App() {
 
   const [animationKey, setAnimationKey] = useState(0);
 
-  const replayAnimation = () => {
+  const repeatAnimation = () => {
     setAnimationKey((prev) => prev + 1);
   };
 
-  // TODO: Decide for "repeat" or "replay" or "reload".
   const repeat = () => {
     setIsBreathing(false);
     setIsFinished(false);
-    replayAnimation();
+    repeatAnimation();
   };
 
   return (
