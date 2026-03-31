@@ -30,7 +30,7 @@ function App() {
   const streakCounter = new LocalStorageStreakCounter();
 
   return (
-    <>
+    <main className="fade-in">
       <BreathingBox
         breathingInterval={BREATHING_INTERVAL}
         breathingCycles={breathingCycles}
@@ -54,7 +54,7 @@ function App() {
         />
       }
       <StreakCounter isFinished={isFinished} streakCounter={streakCounter} />
-    </>
+    </main>
   );
 }
 
