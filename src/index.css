@@ -1,5 +1,6 @@
 @import "./styles/buttons.css";
 @import "./styles/utilities.css";
+@import "./styles/fonts.css";
 @import "./styles/animations.css";
 
 :root {
@@ -29,6 +30,10 @@ body {
     var(--color-dust-grey),
     var(--color-dry-sage)
   );
+}
+
+body {
+  font-family: "Funnel Display", sans-serif;
 }
 
 main {

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Funnel Display";
+  src: url("../assets/fonts/FunnelDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
