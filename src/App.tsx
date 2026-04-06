@@ -7,6 +7,7 @@ import StartBreathingButton from "./components/StartBreathingButton";
 import BreathingDurationSelector from "./components/BreathingDurationSelector";
 import { LocalStorageStreakCounter } from "./services/streak-counter/local-storage-streak-counter";
 import StreakCounter from "./components/StreakCounter";
+import Header from "./components/Header";
 
 function App() {
   const BREATHING_INTERVAL: Seconds = 4;
@@ -30,31 +31,35 @@ function App() {
   const streakCounter = new LocalStorageStreakCounter();
 
   return (
-    <main className="fade-in">
-      <BreathingBox
-        breathingInterval={BREATHING_INTERVAL}
-        breathingCycles={breathingCycles}
-        isBreathing={isBreathing}
-        isFinished={isFinished}
-        setIsFinished={setIsFinished}
-        animationKey={animationKey}
-      />
-      {isBreathing && (
-        <BreathingInstructions
+    <>
+      <Header />
+      <main className="fade-in">
+        <BreathingBox
           breathingInterval={BREATHING_INTERVAL}
+          breathingCycles={breathingCycles}
+          isBreathing={isBreathing}
           isFinished={isFinished}
-          onRepeat={repeat}
+          setIsFinished={setIsFinished}
+          animationKey={animationKey}
         />
-      )}
-      {!isBreathing && <StartBreathingButton setIsBreathing={setIsBreathing} />}
-      {
-        <BreathingDurationSelector
-          className={isBreathing ? "visibility-hidden" : undefined}
-          setBreathingCycles={setBreathingCycles}
-        />
-      }
-      <StreakCounter isFinished={isFinished} streakCounter={streakCounter} />
-    </main>
+        {isBreathing && (
+          <BreathingInstructions
+            breathingInterval={BREATHING_INTERVAL}
+            isFinished={isFinished}
+            onRepeat={repeat}
+          />
+        )}
+        {!isBreathing && (
+          <StartBreathingButton setIsBreathing={setIsBreathing} />
+        )}
+        {
+          <BreathingDurationSelector
+            className={isBreathing ? "visibility-hidden" : undefined}
+            setBreathingCycles={setBreathingCycles}
+          />
+        }
+      </main>
+    </>
   );
 }
 

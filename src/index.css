@@ -21,9 +21,6 @@ body {
 
 body {
   height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   background: radial-gradient(
     circle,
@@ -41,4 +38,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
