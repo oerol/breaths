@@ -6,8 +6,8 @@ import type { Seconds } from "./types/time-units";
 import StartBreathingButton from "./components/StartBreathingButton";
 import BreathingDurationSelector from "./components/BreathingDurationSelector";
 import { LocalStorageStreakCounter } from "./services/streak-counter/local-storage-streak-counter";
-import StreakCounter from "./components/StreakCounter";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const BREATHING_INTERVAL: Seconds = 4;
@@ -59,6 +59,7 @@ function App() {
           />
         }
       </main>
+      <Footer isFinished={isFinished} streakCounter={streakCounter} />
     </>
   );
 }
