@@ -17,5 +17,18 @@
 }
 
 #breathing-duration-selector__wrapper label.checked {
-  text-decoration: underline;
+  position: relative;
+}
+#breathing-duration-selector__wrapper label.checked::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+
+  height: 7px;
+  width: 75%;
+  left: 12.5%;
+  bottom: 3px;
+
+  background: var(--color-hunter-green);
+  opacity: 0.25;
 }
