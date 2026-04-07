@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header isBreathing={isBreathing} />
       <main className="fade-in">
         <BreathingBox
           breathingInterval={BREATHING_INTERVAL}
@@ -59,7 +59,11 @@ function App() {
           />
         }
       </main>
-      <Footer isFinished={isFinished} streakCounter={streakCounter} />
+      <Footer
+        isBreathing={isBreathing}
+        isFinished={isFinished}
+        streakCounter={streakCounter}
+      />
     </>
   );
 }

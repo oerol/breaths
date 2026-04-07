@@ -6,6 +6,10 @@
   animation: fade-in 2s ease-out reverse forwards;
 }
 
+.animation-duration-short {
+  animation-duration: 0.25s;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

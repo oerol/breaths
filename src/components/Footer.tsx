@@ -2,14 +2,18 @@ import type { StreakCounter as StreakCounterInterface } from "../services/streak
 import StreakCounter from "./StreakCounter";
 
 export default function Footer({
+  isBreathing,
   isFinished,
   streakCounter,
 }: {
+  isBreathing: boolean;
   isFinished: boolean;
   streakCounter: StreakCounterInterface;
 }) {
   return (
-    <footer>
+    <footer
+      className={isBreathing ? "fade-out animation-duration-short" : undefined}
+    >
       <StreakCounter isFinished={isFinished} streakCounter={streakCounter} />
     </footer>
   );
