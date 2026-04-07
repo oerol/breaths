@@ -1,3 +1,5 @@
+import "./StartBreathingButton.css";
+
 export default function StartBreathingButton({
   setIsBreathing,
 }: {
