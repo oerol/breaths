@@ -10,10 +10,18 @@ export default function Footer({
   isFinished: boolean;
   streakCounter: StreakCounterInterface;
 }) {
+  const getClassName = () => {
+    if (isFinished) {
+      return "fade-in";
+    }
+    if (isBreathing) {
+      return "fade-out animation-duration-short";
+    }
+
+    return undefined;
+  };
   return (
-    <footer
-      className={isBreathing ? "fade-out animation-duration-short" : undefined}
-    >
+    <footer className={getClassName()}>
       <StreakCounter isFinished={isFinished} streakCounter={streakCounter} />
     </footer>
   );
