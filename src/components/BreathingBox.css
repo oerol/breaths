@@ -11,9 +11,6 @@
   align-items: center;
 }
 #breathing-box {
-  --color-minimum-breath: var(--color-dry-sage);
-  --color-maximum-breath: var(--color-fern);
-
   border-radius: 50%;
 
   animation-name: breathing;
@@ -22,32 +19,33 @@
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-composition: add;
+
+  background: radial-gradient(
+    circle,
+    var(--color-dust-grey),
+    var(--color-fern)
+  );
 }
 
 @keyframes breathing {
   0% {
     height: var(--minimum-size);
     width: var(--minimum-size);
-    background: var(--color-minimum-breath);
   }
   25% {
     height: var(--maximum-size);
     width: var(--maximum-size);
-    background: var(--color-maximum-breath);
   }
   50% {
     height: var(--maximum-size);
     width: var(--maximum-size);
-    background: var(--color-maximum-breath);
   }
   75% {
     height: var(--minimum-size);
     width: var(--minimum-size);
-    background: var(--color-minimum-breath);
   }
   100% {
     height: var(--minimum-size);
     width: var(--minimum-size);
-    background: var(--color-minimum-breath);
   }
 }
