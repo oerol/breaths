@@ -1,6 +1,6 @@
 :root {
-  --minimum-size: 100px;
-  --maximum-size: 200px;
+  --minimum-size: 175px;
+  --maximum-size: 250px;
 }
 
 #breathing-box__wrapper {
