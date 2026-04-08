@@ -1,7 +1,7 @@
 import type { Seconds } from "../types/time-units";
-import "./BreathingBox.css";
+import "./BreathingIndicator.css";
 
-export default function BreathingBox({
+export default function BreathingIndicator({
   breathingInterval,
   breathingCycles,
   isBreathing,

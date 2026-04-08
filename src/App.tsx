@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import BreathingBox from "./components/BreathingBox";
+import BreathingIndicator from "./components/BreathingIndicator";
 import BreathingInstructions from "./components/BreathingInstructions";
 import type { Seconds } from "./types/time-units";
 import StartBreathingButton from "./components/StartBreathingButton";
@@ -34,7 +34,7 @@ function App() {
     <>
       <Header isBreathing={isBreathing} />
       <main className="fade-in">
-        <BreathingBox
+        <BreathingIndicator
           breathingInterval={BREATHING_INTERVAL}
           breathingCycles={breathingCycles}
           isBreathing={isBreathing}
