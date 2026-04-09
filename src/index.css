@@ -12,7 +12,11 @@
   --color-pine-teal: #344e41ff;
 
   --color-white: #ffffff;
+  --color-black: #0000000;
+
+  --primary-text-color: var(--color-black);
   --secondary-text-color: var(--color-white);
+
   --background-color: var(--color-dust-grey);
 }
 

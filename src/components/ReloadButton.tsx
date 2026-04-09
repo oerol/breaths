@@ -8,7 +8,7 @@ export default function ReloadButton({
   onClick: () => void;
 }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} className="icon-button">
       <ReloadIcon className={className} />
     </button>
   );
