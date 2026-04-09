@@ -1,9 +1,13 @@
+:root {
+  --fade-in--animation-duration: 2s;
+}
+
 .fade-in {
-  animation: fade-in 2s ease-out forwards;
+  animation: fade-in var(--fade-in--animation-duration) ease-out forwards;
 }
 
 .fade-out {
-  animation: fade-out 2s ease-out forwards;
+  animation: fade-out var(--fade-in--animation-duration) ease-out forwards;
 }
 
 .animation-duration-short {

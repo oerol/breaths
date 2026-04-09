@@ -26,8 +26,12 @@
 }
 
 #streak-counter #count.vanish {
-  /* TODO: Make delay dynamic */
-  animation: number-vanish 0.5s ease-out forwards 2s;
+  --streak-counter-count-vanish--animation-delay: var(
+    --fade-in--animation-duration
+  );
+
+  animation: number-vanish 0.5s ease-out forwards
+    var(--streak-counter-count-vanish--animation-delay);
 }
 
 #streak-counter #count.appear {
