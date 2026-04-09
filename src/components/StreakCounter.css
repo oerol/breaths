@@ -38,6 +38,10 @@
   animation: number-appear 0.75s ease-out forwards;
 }
 
+/* 
+* Be careful renaming this animation, since it may be referenced in a component!
+* TODO: Find a way to use shared naming. 
+*/
 @keyframes number-vanish {
   0% {
     transform: translateY(0px);

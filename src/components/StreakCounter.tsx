@@ -34,7 +34,6 @@ export default function StreakCounter({
   }, [isFinished]);
 
   const onAnimationEnd = (event: AnimationEvent) => {
-    //TODO: Get rid of this magic string.
     if (event.animationName === "number-vanish") {
       setStreakCount(streakCounter.getCount());
       startSecondHalfOfNumberAnimation();
