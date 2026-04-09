@@ -1,4 +1,4 @@
 export interface StreakCounter {
   getCount(): number;
-  addToStreak(): void;
+  addToStreak(): { updatedCounter: number };
 }

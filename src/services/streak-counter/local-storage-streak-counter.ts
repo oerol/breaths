@@ -79,5 +79,7 @@ export class LocalStorageStreakCounter implements StreakCounter {
   public addToStreak() {
     this.updateStreak();
     this.save();
+
+    return { updatedCounter: this.getCount() };
   }
 }

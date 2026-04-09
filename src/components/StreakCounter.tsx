@@ -23,11 +23,9 @@ export default function StreakCounter({
 
   useEffect(() => {
     if (isFinished) {
-      // TODO: Return the updated value here.
-      streakCounter.addToStreak();
+      const { updatedCounter } = streakCounter.addToStreak();
 
-      const updatedCount = streakCounter.getCount();
-      const streakCountHasIncreased = streakCount !== updatedCount;
+      const streakCountHasIncreased = streakCount !== updatedCounter;
 
       if (streakCountHasIncreased) {
         startFirstHalfOfNumberAnimation();
