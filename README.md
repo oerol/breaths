@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Breaths — Interactive Breathing Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application for guided breathing exercises and stress reduction.
 
-Currently, two official plugins are available:
+**Live Demo:** https://oerol.de/demos/breaths
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Breaths is a simple, modern and interactive frontend application designed to support focused breathing and relaxation exercises through smooth visual guidance and an intuitive user experience.
 
-## Expanding the ESLint configuration
+The project combines **clean UI design**, **fluid animations**, and **performance-oriented frontend engineering** to create a calming digital experience that feels responsive and polished.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This application was built with a strong focus on:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **user-centered interaction design**
+- **smooth motion and visual feedback**
+- **maintainable TypeScript architecture**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **TypeScript**
+- **Vite**
+- **HTML / CSS**
+- **Component-based frontend architecture**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The codebase is structured for scalability and maintainability, using modern frontend best practices and a lightweight build pipeline.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Highlights
+
+- Interactive guided breathing flow
+- Smooth animation timing and transitions
+- Responsive layout across devices
+- Strong focus on UX and visual clarity
+- Clean and maintainable TypeScript codebase
+
+---
+
+## Engineering Focus
+
+This project demonstrates my ability to build polished frontend applications that combine:
+
+- **technical implementation quality**
+- **product thinking**
+- **attention to UX details**
+- **modern tooling expertise**
+
+---
+
+## Local Development
+
+```bash
+pnpm install
+pnpm dev
 ```
