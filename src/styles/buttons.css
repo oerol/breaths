@@ -1,6 +1,6 @@
 .button {
   background: var(--color-hunter-green);
-  color: white;
+  color: var(--secondary-text-color);
   padding: 0.125rem 1rem;
 
   font-family: inherit;

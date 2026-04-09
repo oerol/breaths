@@ -11,6 +11,8 @@
   --color-hunter-green: #3a5a40ff;
   --color-pine-teal: #344e41ff;
 
+  --color-white: #ffffff;
+  --secondary-text-color: var(--color-white);
   --background-color: var(--color-dust-grey);
 }
 
