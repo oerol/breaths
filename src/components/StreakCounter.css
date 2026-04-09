@@ -27,11 +27,11 @@
 
 #streak-counter #count.vanish {
   /* TODO: Make delay dynamic */
-  animation: number-vanish 1s ease-out forwards 2s;
+  animation: number-vanish 0.5s ease-out forwards 2s;
 }
 
 #streak-counter #count.appear {
-  animation: number-appear 1s ease-out forwards;
+  animation: number-appear 0.75s ease-out forwards;
 }
 
 @keyframes number-vanish {
