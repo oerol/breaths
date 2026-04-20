@@ -2,15 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import BreathingIndicator from "./components/BreathingIndicator";
 import BreathingInstructions from "./components/BreathingInstructions";
-import type { Seconds } from "./types/time-units";
 import StartBreathingButton from "./components/StartBreathingButton";
 import BreathingDurationSelector from "./components/BreathingDurationSelector";
 import { LocalStorageStreakCounter } from "./services/streak-counter/local-storage-streak-counter";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { FourFourFourFourBreathing } from "./services/breathing-instructions/four-four-four-four-breathing";
 
 function App() {
-  const BREATHING_INTERVAL: Seconds = 4;
   const [breathingCycles, setBreathingCycles] = useState<number>(3);
 
   const [isBreathing, setIsBreathing] = useState(false);
@@ -30,12 +29,16 @@ function App() {
 
   const streakCounter = new LocalStorageStreakCounter();
 
+  const breathingExercise = new FourFourFourFourBreathing();
+  const breathingCycleDuration = breathingExercise.sumDuration;
+
   return (
     <>
       <Header isBreathing={isBreathing} />
       <main className="fade-in">
         <BreathingIndicator
-          breathingInterval={BREATHING_INTERVAL}
+          breathingExerciseId={breathingExercise.id}
+          breathingCycleDuration={breathingCycleDuration}
           breathingCycles={breathingCycles}
           isBreathing={isBreathing}
           isFinished={isFinished}
@@ -44,7 +47,8 @@ function App() {
         />
         {isBreathing && (
           <BreathingInstructions
-            breathingInterval={BREATHING_INTERVAL}
+            breathingExercise={breathingExercise}
+            breathingCycles={breathingCycles}
             isFinished={isFinished}
             onRepeat={repeat}
           />

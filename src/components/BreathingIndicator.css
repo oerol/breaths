@@ -13,7 +13,6 @@
 #breathing-box {
   border-radius: 50%;
 
-  animation-name: breathing;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-direction: normal;
@@ -27,7 +26,7 @@
   );
 }
 
-@keyframes breathing {
+@keyframes four-four-four-four__breathing {
   0% {
     height: var(--minimum-size);
     width: var(--minimum-size);
