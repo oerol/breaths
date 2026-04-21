@@ -1,0 +1,40 @@
+#settings {
+  display: flex;
+  gap: 0.25rem;
+}
+#settings-icon {
+  display: flex;
+  align-items: center;
+}
+#settings-icon.open {
+  transition: 0.5s transform ease-out;
+  transform: rotate(-30deg);
+}
+
+#settings-icon.hidden {
+  transition: 0.5s transform ease-out;
+  transform: rotate(0deg);
+}
+
+#settings-content__wrapper {
+  position: relative;
+  /* width: 200px; */
+  /* height: 50px; */
+  overflow: hidden;
+}
+
+#settings-content {
+  position: relative;
+  transition: 0.5s ease-out;
+  /* position: absolute; */
+  /* left: -172px; */
+  /* top: -3px; */
+}
+
+#settings-content.hidden {
+  left: 200px;
+}
+
+#settings-content.open {
+  left: 0;
+}

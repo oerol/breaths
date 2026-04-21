@@ -4,11 +4,11 @@ header {
   align-items: center;
 }
 
-#breathing-exercise-selector__wrapper {
+#settings__wrapper {
   width: 100%;
   position: relative;
 }
-#breathing-exercise-selector {
+#settings {
   position: absolute;
   right: 1rem;
   top: 1rem;
