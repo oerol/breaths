@@ -1,0 +1,21 @@
+#breathing-exercise-selector {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 5px;
+  background-color: var(--color-dust-grey);
+}
+
+#breathing-exercise-selector div {
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.125rem 0.75rem;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+#breathing-exercise-selector div.active {
+  opacity: 1;
+  background-color: var(--color-hunter-green);
+  color: var(--secondary-text-color);
+}

@@ -5,13 +5,13 @@ export default function BreathingInstructionsActive({
   text,
   isBreathHold,
   isFinished,
-  breathingInterval,
+  breathHoldDuration,
   onFadeOutAnimation,
 }: {
   text: string;
   isBreathHold: boolean;
   isFinished: boolean;
-  breathingInterval: Seconds;
+  breathHoldDuration: Seconds;
   onFadeOutAnimation: () => void;
 }) {
   return (
@@ -23,7 +23,7 @@ export default function BreathingInstructionsActive({
       {isBreathHold && (
         <BreathHoldAnimation
           isFinished={isFinished}
-          breathingInterval={breathingInterval}
+          breathingDuration={breathHoldDuration}
         />
       )}
     </span>

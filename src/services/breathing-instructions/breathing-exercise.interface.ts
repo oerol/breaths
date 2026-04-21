@@ -10,5 +10,6 @@ export interface BreathingPattern {
 export interface BreathingExercise {
   id: BREATHING_EXERCISE_ID;
   pattern: BreathingPattern[];
+  sumDuration: Seconds;
   breathHoldDuration: Seconds;
 }

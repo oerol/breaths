@@ -8,8 +8,14 @@ import { LocalStorageStreakCounter } from "./services/streak-counter/local-stora
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { FourFourFourFourBreathing } from "./services/breathing-instructions/four-four-four-four-breathing";
+import type { BreathingExercise } from "./services/breathing-instructions/breathing-exercise.interface";
 
 function App() {
+  const [breathingExercise, setBreathingExercise] = useState<BreathingExercise>(
+    new FourFourFourFourBreathing(),
+  );
+
+  // TODO: Pass this down.
   const [breathingCycles, setBreathingCycles] = useState<number>(3);
 
   const [isBreathing, setIsBreathing] = useState(false);
@@ -29,12 +35,15 @@ function App() {
 
   const streakCounter = new LocalStorageStreakCounter();
 
-  const breathingExercise = new FourFourFourFourBreathing();
   const breathingCycleDuration = breathingExercise.sumDuration;
 
   return (
     <>
-      <Header isBreathing={isBreathing} />
+      <Header
+        isBreathing={isBreathing}
+        breathingExercise={breathingExercise}
+        setBreathingExercise={setBreathingExercise}
+      />
       <main className="fade-in">
         <BreathingIndicator
           breathingExerciseId={breathingExercise.id}

@@ -31,18 +31,44 @@
     height: var(--minimum-size);
     width: var(--minimum-size);
   }
+  /* 4 / (4 + 4 + 4 + 4) */
   25% {
     height: var(--maximum-size);
     width: var(--maximum-size);
   }
+  /* 2 * (4 / (4 + 4 + 4 + 4)) */
   50% {
     height: var(--maximum-size);
     width: var(--maximum-size);
   }
+  /* 3 * (4 / (4 + 4 + 4 + 4)) */
   75% {
     height: var(--minimum-size);
     width: var(--minimum-size);
   }
+  /* 4 * (4 / (4 + 4 + 4 + 4)) */
+  100% {
+    height: var(--minimum-size);
+    width: var(--minimum-size);
+  }
+}
+
+@keyframes four-seven-eight__breathing {
+  0% {
+    height: var(--minimum-size);
+    width: var(--minimum-size);
+  }
+  /* 4 / (4 + 7 + 8) */
+  21.05% {
+    height: var(--maximum-size);
+    width: var(--maximum-size);
+  }
+  /* (4 / (4 + 7 + 8)) + (7 / (4 + 7 + 8)) */
+  57.89% {
+    height: var(--maximum-size);
+    width: var(--maximum-size);
+  }
+  /* (4 / (4 + 7 + 8)) + (7 / (4 + 7 + 8)) + (8 / (4 + 7 + 8)) */
   100% {
     height: var(--minimum-size);
     width: var(--minimum-size);

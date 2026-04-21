@@ -96,7 +96,7 @@ export default function BreathingInstructions({
           text={currentLabel}
           isBreathHold={isBreathHold}
           isFinished={isFinished}
-          breathingInterval={breathingInterval}
+          breathHoldDuration={breathingExercise.breathHoldDuration}
           onFadeOutAnimation={onFadeOutAnimation}
         />
       )}

@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import type { Seconds } from "../types/time-units";
 
 export default function BreathHoldAnimation({
-  breathingInterval,
+  breathingDuration,
   isFinished,
 }: {
   isFinished: boolean;
-  breathingInterval: Seconds;
+  breathingDuration: Seconds;
 }) {
   const MAX_NUMBER_OF_DOTS = 3;
   const [dotCount, setDotCount] = useState(1);
@@ -20,7 +20,7 @@ export default function BreathHoldAnimation({
         }
         setDotCount((prev) => (prev + 1) % (MAX_NUMBER_OF_DOTS + 1));
       },
-      (breathingInterval * 1000) / MAX_NUMBER_OF_DOTS,
+      (breathingDuration * 1000) / MAX_NUMBER_OF_DOTS,
     );
 
     return () => clearInterval(interval);
