@@ -1,3 +1,4 @@
+import "./Footer.css";
 import type { StreakCounter as StreakCounterInterface } from "../services/streak-counter/streak-counter.interface";
 import StreakCounter from "./StreakCounter";
 
