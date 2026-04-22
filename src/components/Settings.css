@@ -2,7 +2,7 @@
   display: flex;
   gap: 0.25rem;
 }
-#settings-icon {
+#settings-icon__wrapper {
   display: flex;
   align-items: center;
 }

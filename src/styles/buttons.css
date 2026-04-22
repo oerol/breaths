@@ -1,6 +1,9 @@
 .button,
 .icon-button {
   cursor: pointer;
+
+  background: transparent;
+  border: none;
 }
 
 .button {
@@ -10,7 +13,6 @@
 
   font-family: inherit;
 
-  border: none;
   border-radius: 3px;
 }
 

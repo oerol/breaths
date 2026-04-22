@@ -29,15 +29,13 @@ export function Settings({
         </div>
       </div>
 
-      <div
-        id="settings-icon"
-        className={["icon-button", isSettingsOpen ? "open" : "hidden"].join(
-          " ",
-        )}
+      <button
+        id="settings-icon__wrapper"
+        className="icon-button"
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
       >
-        <SettingsIcon />
-      </div>
+        <SettingsIcon className={isSettingsOpen ? "open" : "hidden"} />
+      </button>
     </div>
   );
 }
