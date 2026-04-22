@@ -37,6 +37,7 @@ export default function BreathingIndicator({
     >
       <div
         id="breathing-box"
+        className={isBreathing ? "active" : "inactive"}
         key={animationKey}
         style={{
           animationDuration: `${breathingCycleDuration}s`,

@@ -26,6 +26,13 @@
   );
 }
 
+#breathing-box {
+  transition: 0.5s transform ease-in-out;
+}
+#breathing-box.inactive:hover {
+  transform: scale(1.1);
+}
+
 @keyframes four-four-four-four__breathing {
   0% {
     height: var(--minimum-size);
