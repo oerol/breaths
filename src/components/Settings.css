@@ -5,6 +5,7 @@
 #settings-icon__wrapper {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 #settings-icon.open {
   transition: 0.5s transform ease-out;
