@@ -76,6 +76,8 @@ function App() {
         isBreathing={isBreathing}
         isFinished={isFinished}
         streakCounter={streakCounter}
+        breathingExercise={breathingExercise}
+        setBreathingExercise={setBreathingExercise}
       />
     </>
   );

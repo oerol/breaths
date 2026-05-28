@@ -9,7 +9,7 @@
 }
 #settings-icon.open {
   transition: 0.5s transform ease-out;
-  transform: rotate(-30deg);
+  transform: rotate(30deg);
 }
 
 #settings-icon.hidden {
@@ -33,9 +33,9 @@
 }
 
 #settings-content.hidden {
-  left: 200px;
+  right: 200px;
 }
 
 #settings-content.open {
-  left: 0;
+  right: 0;
 }

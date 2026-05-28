@@ -15,6 +15,13 @@ export function Settings({
 
   return (
     <div id="settings" onMouseLeave={() => setIsSettingsOpen(false)}>
+      <button
+        id="settings-icon__wrapper"
+        className="icon-button"
+        onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+      >
+        <SettingsIcon className={isSettingsOpen ? "open" : "hidden"} />
+      </button>
       <div id="settings-content__wrapper">
         <div
           id="settings-content"
@@ -28,14 +35,6 @@ export function Settings({
           </div>
         </div>
       </div>
-
-      <button
-        id="settings-icon__wrapper"
-        className="icon-button"
-        onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-      >
-        <SettingsIcon className={isSettingsOpen ? "open" : "hidden"} />
-      </button>
     </div>
   );
 }
