@@ -35,6 +35,47 @@
   transform: scale(1.1);
 }
 
+#breathing-box {
+  position: relative;
+}
+#breathing-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+
+  border-radius: 50%;
+  border: 2px solid var(--color-fern);
+  box-sizing: border-box;
+
+  height: 99%;
+  width: 99%;
+  left: 0.5%;
+  top: 0.5%;
+
+  animation-name: ripple;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-duration: 3s;
+}
+
+#breathing-box.active::after {
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
 @keyframes four-four-four-four__breathing {
   0% {
     height: var(--minimum-size);

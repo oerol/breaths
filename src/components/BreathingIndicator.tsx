@@ -30,6 +30,15 @@ export default function BreathingIndicator({
     }
   };
 
+  const onAnimationEnd = ({ animationName }: React.AnimationEvent) => {
+    // Ignores visual effects such as 'ripple'
+    if (animationName !== getAnimationName()) {
+      return;
+    }
+
+    setIsFinished(true);
+  };
+
   return (
     <div
       id="breathing-box__wrapper"
@@ -45,7 +54,7 @@ export default function BreathingIndicator({
           animationPlayState: isBreathing ? "running" : "paused",
           animationName: getAnimationName(),
         }}
-        onAnimationEnd={() => setIsFinished(true)}
+        onAnimationEnd={onAnimationEnd}
       ></div>
     </div>
   );
